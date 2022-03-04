@@ -1,0 +1,10 @@
+name: jeff's workflow
+on: push
+
+jobs: 
+  my_build: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo "Hello"
+        echo "World"
