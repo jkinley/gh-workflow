@@ -1,14 +1,13 @@
 name: gh-workflow
 
 on:
-#   push:
-#     branches:
-#       - master
-      
-workflow_dispatch:
- tag:
-  description: 'Add a tag.'
-  required: false
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Add a tag.'
+        required: false
+
+
 
 jobs: 
   my_build: 
