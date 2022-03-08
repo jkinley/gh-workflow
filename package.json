@@ -7,6 +7,6 @@
   "author": "Jeff <jkinley@icloud.com>",
   "license": "MIT",
   "publishConfig": {
-    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+    "@jkinley:registry": "https://npm.pkg.github.com"
   }
 }
