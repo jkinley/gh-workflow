@@ -5,6 +5,7 @@ on:
     inputs:
       tag:
         description: 'Add a tag.'
+        default: ''
         required: false
 
 
