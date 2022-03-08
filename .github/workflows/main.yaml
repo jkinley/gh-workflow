@@ -9,11 +9,20 @@ on:
         required: false
 
 
-
 jobs: 
-  my_build: 
+  job1: 
     runs-on: ubuntu-latest
     steps:
     - run: |
         echo ${{ github.event_name }}
         echo Test ran on ${{ runner.os }} on branch ${{ github.ref }}
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
