@@ -1,0 +1,9 @@
+{
+  "name": "@jkinley/gh-workflow",
+  "version": "1.0.0",
+  "description": "testing workflows",
+  "main": "index.js",
+  "repository": "git@github.com:jkinley/gh-workflow.git",
+  "author": "Jeff <jkinley@icloud.com>",
+  "license": "MIT"
+}
