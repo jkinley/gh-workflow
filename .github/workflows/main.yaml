@@ -1,5 +1,4 @@
 name: gh-workflow
-
 on:
   workflow_dispatch:
     inputs:
@@ -7,21 +6,27 @@ on:
         description: 'Add a tag.'
         default: ''
         required: false
-
-
+        
 jobs: 
-  job1: 
+  build: 
     runs-on: ubuntu-latest
     steps:
     - run: |
         echo ${{ github.event_name }}
         echo Test ran on ${{ runner.os }} on branch ${{ github.ref }}
-
-  job2:
+  
+  publish-gpr:
+    needs: build
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 12
-      - run: npm ci
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
