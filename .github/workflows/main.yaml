@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Hello"
-        echo "World"
+        echo ${{ github.event_name }}
+        echo Test ran on ${{ runner.os }} on branch ${{ github.ref }}
