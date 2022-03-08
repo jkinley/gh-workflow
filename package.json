@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:jkinley/gh-workflow.git",
   "author": "Jeff <jkinley@icloud.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+  }
 }
