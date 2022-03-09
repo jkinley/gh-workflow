@@ -6,7 +6,9 @@ on:
         description: 'Add a tag.'
         default: ''
         required: false
-        
+  release:
+    types: [created]
+    
 jobs: 
   build: 
     runs-on: ubuntu-latest
